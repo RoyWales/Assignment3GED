@@ -9,10 +9,14 @@ public class CommandInvoker : MonoBehaviour
     static List<ICommand> commandHistory;
     static int counter;
 
+    private bool dirtyFlag; //dirty flag
+
     private void Awake()
     {
         commandBuffer = new Queue<ICommand>();
         commandHistory = new List<ICommand>();
+
+        dirtyFlag = false; //initalizing it to false
     }
 
     public static void AddCommand(ICommand command)
@@ -57,6 +61,26 @@ public class CommandInvoker : MonoBehaviour
                     counter++;
                 }
             }
+        }
+
+        if (dirtyFlag) //checks if dirty flag is true
+        {
+            List<string> lines = new List<string>();
+
+            foreach(ICommand c in commandHistory)
+            {
+                lines.Add(c.ToString());
+            }
+
+
+            System.IO.File.WriteAllLines(Application.dataPath + "/logfile.txt", lines);
+
+            dirtyFlag = false; //reset dirty flag to false
+        }
+
+        if(Input.GetKeyDown(KeyCode.P))  //when you press P you save
+        {
+            dirtyFlag = true;
         }
     }
 }

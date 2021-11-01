@@ -30,5 +30,12 @@ public class PlaceKeyCommand : ICommand
 
         
     }
+
+    public override string ToString()
+    {
+        return "Key Placed at:\t" + "(x, y, z)= (" + position.x + ", " + position.y + ", " + position.z + ")" + "\t";
+        
+    }
+
 }
 
