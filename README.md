@@ -11,6 +11,8 @@ Screenshots: Under the ScreenShots folder
 
 Video Demo Link: https://youtu.be/xJPKxz8MtUA
 
+WebGL Link: https://roywales.github.io/Assignment3GED/
+
 My working build of the game is in the build folder
 
 Thrid Party Acknowledgement: I used my assignment 2 base which used: the unity manual to clear a few things up https://docs.unity3d.com/Manual/index.html and also used the movement script that we created for our GDW game and it used tutorial 4 and 5 to help with setting up patterns and I used the enemy prefab we created for our GDW game.
