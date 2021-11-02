@@ -9,7 +9,7 @@ Controls: WASD to move, Right clicking on the path spawns a key, Z to undo the l
 
 Screenshots: Under the ScreenShots folder
 
-Video Demo Link: 
+Video Demo Link: https://youtu.be/xJPKxz8MtUA
 
 My working build of the game is in the build folder
 
